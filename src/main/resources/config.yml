@@ -1,0 +1,127 @@
+# Phần bắt đầu của config
+config:
+  # Prefix của plugin trong các tin nhắn
+  prefix: '&eHyperHook &3| &f'
+  # Tên của máy chủ Minecraft (cụm server) sử dụng plugin
+  proxy_name: 'PH_SERVER'
+  # Phần cài đặt của Discord
+  discord:
+    # Token của bot dùng để kết nối
+    bot_token: ''
+    # ID của máy chủ Discord sử dụng BOT
+    guild_id: ''
+    # Các kênh cho phép dùng BOT (cái này ID)
+    allowed_channels:
+      - 'CHANNEL_1'
+    # Sử dụng slash commands thay vì chat commands
+    use_slash_commands: false
+    # Prefix lệnh của bot (nếu có nhiều bot dùng slash command luôn đi xd)
+    # Nếu máy chủ Discord có nhiều bot, thì nên thay đổi cho mỗi prefix khác nhau
+    chat_command_prefix: 'ph.'
+  bot:
+    # Mã xác nhận kết nối đến bot nên có bao nhiêu kí tự?
+    code_length: 5
+    # Mã xác nhận sẽ hết hạn sau bao nhiêu giây?
+    code_expire: 60
+    # Cài đặt các kí tự được sử dụng
+    characters:
+      # Sử dụng chữ cái bình thường (a, b, c ... z)
+      normal: true
+      # Sử dụng chữ cái in hoa (A, B, C ... Z)
+      upcase: true
+      # Sử dụng các kí tự chữ số (0, 1, 2 ... 9)
+      numbers: true
+    # Cài đặt RP của bot
+    rich_presence:
+      # Tên của hoạt động (PLAYING, STREAMING, WATCHING)
+      # Nếu ghi bậy thì sẽ tự động chuyển về 'PLAYING'
+      type: 'PLAYING'
+      # Tiêu đề của hoạt động
+      title: 'A Minecraft Server'
+# Đây là phần cài đặt Emoji, với mỗi loại khoáng sản cho một emotes khác nhau
+# Nếu Emoji được đặt ở máy chủ discord khác, ta cài ID của Emoji đấy vào
+# Để lấy ID, ta chat vào một kênh tin nhắn: \:<emote>: (VD: \:coal:)
+emotes:
+  COAL: ':coal:'
+  LAPIS_LAZULI: ':lapis:'
+  REDSTONE: ':redstone:'
+  IRON_INGOT: ':iron:'
+  GOLD_INGOT: ':gold:'
+  DIAMOND: ':diamond:'
+  EMERALD: ':emerald:'
+  STONE: ':stone:'
+  COAL_BLOCK: ':coal_block:'
+  LAPIS_BLOCK: ':lapis_block:'
+  REDSTONE_BLOCK: ':redstone_block:'
+  IRON_BLOCK: ':iron_block:'
+  GOLD_BLOCK: ':gold_block:'
+  DIAMOND_BLOCK: ':diamond_block:'
+  EMERALD_BLOCK: ':emerald_block:'
+  money: ':coin:'
+  blocks: ':chest:'
+  normal: ':normal:'
+
+# Phiên dịch tên khoáng sản (Chủ yếu để trợ giúp với slash command)
+translate:
+  COAL: 'Than'
+  LAPIS_LAZULI: 'Ngọc Lưu Ly'
+  REDSTONE: 'Đá Đỏ'
+  IRON_INGOT: 'Sắt'
+  GOLD_INGOT: 'Vàng'
+  DIAMOND: 'Kim Cương'
+  EMERALD: 'Ngọc Lục Bảo'
+  STONE: 'Đá'
+  COAL_BLOCK: 'Khối Than'
+  LAPIS_BLOCK: 'Khối Lưu Ly'
+  REDSTONE_BLOCK: 'Khối Đá Đỏ'
+  IRON_BLOCK: 'Khối Sắt'
+  GOLD_BLOCK: 'Khối Vàng'
+  DIAMOND_BLOCK: 'Khối Kim Cương'
+  EMERALD_BLOCK: 'Khối Ngọc Lục Bảo'
+
+messages:
+  no_token: '{prefix} &cLỗi: &fVui lòng cài đặt &eToken &fcủa bot trong &aconfig.yml&f!'
+  no_guild: '{prefix} &cLỗi: &fVui lòng cài đặt &eID &fmáy chủ &bDiscord &fcho &eBOT&f!'
+  no-param: '{prefix} &cLỗi: &fLệnh của bạn không có đủ thông tin!'
+  dependency_error: '{prefix} &cLỗi: &fMáy chủ của bạn không có &aPreventHopper &fhoặc &aVault&f!'
+  invalid_plugin: '{prefix} &cLỗi: &fPlugin &aPreventHopper &fkhông hợp lệ hoặc đã bị lỗi!'
+  only_player: '{prefix} &cLỗi: &fLệnh này chỉ được dùng bởi người chơi thôi nha!'
+  invalid_code: '{prefix} &cLỗi: &fMã kết nối tài khoản không hợp lệ hoặc đã hết hạn!'
+  syntax-connect: '{prefix} &aCú pháp: &a/hh hook &e<Mã kết nối>'
+  account_connected: '{prefix} &aGhi chú: &fĐã kết nối thành công tài khoản với &9Discord&f!'
+  reload: '{prefix} &aGhi chú: &fPlugin đã được reload, tất cả kết nối bị ngắt!'
+  # Từ đây là tin nhắn của Discord, dùng mã màu không được đâu ~
+  error: '> :x: Đã xảy ra lỗi khi triển khai lệnh! Liên hệ **ADMIN** để khắc phục nha **:3**'
+  unavailable: '> Lệnh này hiện đang bị tắt ở máy chủ của bạn!'
+  not_permitted: '> Bạn không thể dùng lệnh của BOT ở kênh chat này!'
+  id: '> **ID** tài khoản **Discord** của bạn là: **{id}**'
+  code: '> Mã kết nối của bạn là: **{code}** - Hết hạn sau: **{expire}**'
+  discord_connected: '> Đã kết nối thành công tài khoản của bạn với **{player}**'
+  not_connected: '> **:x: Lỗi:** Tài khoản của bạn chưa được kết nối với kho khoáng sản nào cả!'
+  only_proxy: '> Hiện chỉ có cụm máy chủ **{proxy}** hỗ trợ kết nối kho khoáng sản!'
+  disconnect: '> Tài khoản của bạn bị ngắt kết nối với BOT! Lí do: **{reason}**'
+  notify-off: '> Đã **tắt** hệ thống thông báo đầy kho! :x:'
+  notify-on: '> Đã **bật** hệ thống thông báo đầy kho! :white_check_mark: - Thời gian kiểm tra: **{time}** / lần'
+  no-time: '> :x: **Lỗi:** Vui lòng nhập thời gian vào đi bạn!'
+  invalid_type: '> :x: **Lỗi:** Loại khoáng sản bạn chọn không hợp lệ!'
+  invalid_num: '> :x: **Lỗi:** Vui lòng nhập một số hợp lệ!'
+  insufficient_storage: '> :x: **Lỗi:** Kho khoáng sản của bạn không đủ **{amount}** {type} để thực hiện bán!'
+  sell_output: '> :white_check_mark: Đã bán thành công **{amount}** {type} - Giá trị: **${price}**'
+  type_unspecified: '> :x: **Lỗi:** Vui lòng nhập loại khoáng sản bạn muốn bán!'
+  host_no_perm: '> :x: **Lỗi:** Tài khoản trong game của bạn không có quyền dùng tính năng nén khối!'
+  crafted: '> Đã nén **{count}** {type} thành công, bạn nhận được **{blocks}** {block} :white_check_mark:'
+# Đây là phần cài đặt thông tin trợ giúp của lệnh, ứng với mỗi lệnh có tin nhắn thông tin
+commands:
+  connect: 'Tạo mã kết nối tài khoản Discord với kho khoáng sản trong máy chủ.'
+  view: 'Hiển thị thông tin của kho khoáng sản kết nối với Discord của bạn.'
+  sell: 'Bán khoáng sản có trong kho khoáng sản của bạn.'
+  echo: 'Liệt kê các cụm máy chủ khác có hỗ trợ kết nối kho khoáng sản qua Discord'
+  craft: 'Nén khoáng sản trong kho thành khối. Yêu cầu phải có quyền nén khối trong game!'
+  notify: 'Bật chế độ thông báo đầy kho khoáng sản.'
+  
+# Phần cài đặt tương tác của Discord BOT
+interactions:
+  # Tương tác nút của lệnh view
+  view:
+    # Thời hạn tối đa để tương tác với các nút (tính theo giây)
+    max-time: 60

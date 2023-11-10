@@ -1,0 +1,16 @@
+name: HyperHook
+version: 0.1-dev03-2023
+author: StellarSeal
+main: me.stella.Main.PluginImpl
+description: A lightweight hook between PreventHopper and Discord.
+depends: [PreventHopper-ORE, Vault]
+soft-depend: [PlaceholderAPI]
+commands:
+  hyperhook:
+    description: The main command of the plugin
+    usage: /hyperhook
+    aliases: [hh, hook]
+permissions:
+  hyperhook.use.hook:
+    description: Permission to hook your account to Discord
+    default: true
