@@ -1,5 +1,5 @@
 name: HyperHook
-version: 0.1-dev03-2023
+version: 0.2-beta2024
 author: StellarSeal
 main: me.stella.Main.PluginImpl
 description: A lightweight hook between PreventHopper and Discord.

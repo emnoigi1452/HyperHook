@@ -14,7 +14,9 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -52,9 +54,10 @@ public class SlashListener extends ListenerAdapter {
 					switch(e.getName().trim().toLowerCase()) {
 						case "notify":
 							if(e.getFocusedOption().getName().equals("duration")) {
-								List<Command.Choice> choices = CommandNotify.TIME.keySet().stream()
-										.filter(time -> time.startsWith(e.getFocusedOption().getValue()))
-										.map(time -> new Command.Choice(ElementBuilder.parseTimeName(time), time))
+								List<Command.Choice> choices = CommandNotify.TIME.entrySet().stream()
+										.filter(time -> time.getKey().startsWith(e.getFocusedOption().getValue()))
+										.sorted(Map.Entry.comparingByValue())
+										.map(time -> new Command.Choice(ElementBuilder.parseTimeName(time.getKey()), time.getKey()))
 										.collect(Collectors.toList());
 								e.replyChoices(choices).queue();
 							}

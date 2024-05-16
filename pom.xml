@@ -29,11 +29,6 @@
 	      <url>https://jitpack.io</url>
 	  </repository>
       <repository>
-          <id>dv8tion</id>
-          <name>m2-dv8tion</name>
-          <url>https://m2.dv8tion.net/releases</url>
-      </repository>
-      <repository>
           <id>placeholderapi</id>
           <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
       </repository>
@@ -47,16 +42,18 @@
            <type>jar</type>
            <scope>provided</scope>
        </dependency>
-	<dependency>
-	    <groupId>commons-collections</groupId>
-	    <artifactId>commons-collections</artifactId>
-	    <version>3.2.2</version>
-	</dependency>
-	<dependency> 
-	  <groupId>org.slf4j</groupId>
-	  <artifactId>slf4j-api</artifactId>
-	  <version>1.7.36</version>
-	</dependency>
+	   <dependency>
+	      <groupId>com.github.MilkBowl</groupId>
+	      <artifactId>VaultAPI</artifactId>
+	      <version>1.7</version>
+	      <scope>provided</scope>
+	   </dependency>
+       <dependency>
+          <groupId>me.clip</groupId>
+          <artifactId>placeholderapi</artifactId>
+          <version>2.10.4</version>
+          <scope>provided</scope>
+       </dependency>
    </dependencies>
   
 </project>
