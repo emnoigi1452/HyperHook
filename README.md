@@ -1,4 +1,4 @@
-# HyperHook - v1.0 Beta
+# HyperHook - v0.2-beta
 The source code of HyperHook - A fork to connect PreventHopper with Discord
 
 # Purpose
@@ -12,4 +12,5 @@ The source code of HyperHook - A fork to connect PreventHopper with Discord
 
 # Usage
 - If you wish to use this plugin yourself, I'd suggest compiling the plugin on your own
+- All needed libraries (JARs) are contained in the libs folder (except for PreventHopper)
 - No releases will be posted to this repository.
